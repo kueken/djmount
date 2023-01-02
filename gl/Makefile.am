@@ -16,9 +16,7 @@ AUTOMAKE_OPTIONS = 1.5 gnits
 noinst_LTLIBRARIES = libgnu.la
 
 libgnu_la_SOURCES =
-libgnu_la_LIBADD = $(gl_LTLIBOBJS)
-libgnu_la_DEPENDENCIES = $(gl_LTLIBOBJS)
-libgnu_la_LDFLAGS = $(AM_LDFLAGS)
+libgnu_la_LIBADD = @LTLIBOBJS@
 noinst_HEADERS =
 EXTRA_DIST =
 BUILT_SOURCES =

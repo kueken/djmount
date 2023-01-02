@@ -5,7 +5,7 @@
 #
 # Process this file with autoconf to produce a configure script.
 #
-# (C) Copyright 2005 Rémi Turboult <r3mi@users.sourceforge.net>
+# (C) Copyright 2005 Rï¿½mi Turboult <r3mi@users.sourceforge.net>
 #
 
 AC_PREREQ(2.59)
@@ -22,7 +22,7 @@ AM_INIT_AUTOMAKE([1.9 -Wall std-options gnu])
 
 AC_CONFIG_HEADERS(config.h)
 
-AC_COPYRIGHT([Copyright (C) 2005 Rémi Turboult])
+AC_COPYRIGHT([Copyright (C) 2005 Rï¿½mi Turboult])
 AC_REVISION([$Revision$])
 
 
@@ -184,7 +184,8 @@ if test x"$enable_charset" = xyes; then
 	# Checks for function in C library or libiconv 
 	# (AM macros from "gettext" package)
 	AM_ICONV
-	AM_LANGINFO_CODESET
+#	AM_LANGINFO_CODESET
+	AM_GNU_GETTEXT([external])
 	# TBD print warning if no setlocale or nl_langinfo(CODESET) implemented
 fi
 AM_CONDITIONAL(WANT_ICONV, 
